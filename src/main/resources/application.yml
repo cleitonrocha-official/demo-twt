@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/meu-banco
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  
+    # Opção para criar as tabelas automaticamente com base nas entidades JPA
+  sql:
+    init:
+      mode: always 
+  h2:
+    console:
+      enabled: true  # Habilita o console do H2
+      path: /h2-console  # URL para acessar o console (http://localhost:8080/h2-console)
+  jpa:
+    hibernate:
+      ddl-auto: update  # Opções: create, create-drop, update, validate, none
+    show-sql: true  # Habilita a exibição das queries SQL no log
